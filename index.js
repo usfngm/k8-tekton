@@ -1,13 +1,16 @@
-const app = require('express')()
+var express = require('express');
 
-app.get('/', (req, res) => {
-  res.send("Hello from Appsody!");
+var PORT;
+if (process.env.PORT) {
+  PORT = process.env.PORT;
+} else {
+  PORT = 80;
+}
+
+var app = express();
+app.get('/', function (req, res) {
+  res.send('This is my first update');
 });
 
-var port = 3300;
-
-var server = app.listen(port, function () {
-  console.log("Server listening on " + port);
-})
-
-module.exports.app = app;
+app.listen(PORT);
+console.log(' Application Running on port' + PORT);
