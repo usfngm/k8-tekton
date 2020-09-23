@@ -9,7 +9,7 @@ if (process.env.PORT) {
 
 var app = express();
 app.get('/', function (req, res) {
-  res.send('This is my first update');
+  res.send('<h1>Hello World</h1>');
 });
 
 app.listen(PORT);
