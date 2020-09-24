@@ -9,7 +9,7 @@ if (process.env.PORT) {
 
 var app = express();
 app.get('/', function (req, res) {
-  res.send('<h1>Hello World from tekton</h1>');
+  res.send('<h1>Hello World</h1>');
 });
 
 app.listen(PORT);
